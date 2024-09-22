@@ -1,0 +1,224 @@
+/* se llaman a las clases con . y luego el nombre 
+de la clase Exactamente igual a como lo pusieron 
+en html 
+
+.nombreDeLaClase{
+
+}
+#nombredelId{
+
+}
+/* Selector universal -> *
+me afecta a todas las clases a TODAS Y CADA
+
+/* ---------------------------------------------------------------------*/
+
+/* Condiciones iniciales - estilos  generales
+    1. Selector universal 
+    2. Variables
+    3. Body
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* variables en css */
+/* root -> al archivo raiz   -> html
+   Todas las variables declaradas en root pueden ser usadas
+   para todo el proyecto
+   - paleta de colores 
+   - tipografias 
+   - tamaños o medidas usadas frecuentemente
+   */
+
+
+:root {
+    --backgroundColor: #e0eef8;
+    --colorPrimary: #377aa1;
+    --textColor: #000;
+    --tipography: 'Arial Narrow', sans-serif;
+}
+
+body {
+    /* ancho*/
+    width: 100uw;
+    background: var(--colorPrimary);
+    height: auto;
+    /*  alto automatico */
+    box-sizing: border-box;
+
+    /* color de fonde */
+    background-color: var(--backgroundColor);
+    font-family: var(--tipography);
+    /* para gestionar el scroll */
+    overflow-x: hidden;
+}
+
+/*----------------------HEADER---------------------------*/
+
+header {
+    border: solid darkgrey;
+    width: 100vw;
+    /* vw  -> viuwport width */
+   
+    /* vh -> viuwport height */
+}
+
+/* menu de navegación */
+.container-narBar {
+    border: solid darkblue;
+    width: 100vw;
+    height: 60px;
+    background-color: var(--colorPrimary);
+}
+
+.navBar-list {
+    width: 100%;
+    height: 100%;
+    /* FLEXBOX -> 
+    Display -> como vemos el contenido
+    flex-> de forma flexible-> caja flexible
+    Las propiedades de flex se usan en el
+    padre */
+    display: flex;
+    /* Centrar mis elements */
+    justify-content: center;
+    align-items: center;
+    /* quitar el estilo de la lista*/
+    list-style: none;
+    /* separar entre si sus elementos */
+    gap: 50px;
+}
+
+#logo {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    border-radius: 50px;
+}
+
+/* Banner*/
+.container-narBar {
+    border: 5px solid rgb(39, 12, 214);
+    width: 100%;
+    height: 100%;
+}
+
+/* clase de padre contenedor + espacio + etiqueta
+hijo */
+.container-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/*.btn{ 
+    background-color:var(--backgroundColor);
+    color: var(--textColor);
+
+    padding: 10px 35px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    
+}*/
+.btn {
+    top: 60%;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    /* un valor ese valor se pone arriba, abajo, derecha e izquierda */
+    /* 1er valor -> arriba y abajo
+       2do valor -> derecha e izquierda
+    */
+    padding: 10px 60px;
+    /* darle redondeo al elemento */
+    border-radius: 10px;
+    border: 2px solid #979899;
+    /* para nosotros mover como queramos algún elemento */
+    position: absolute;
+    
+    left: 40%;
+    cursor: pointer;
+}
+
+/* pseudoclase ->n nos extiende funcionaledades de estilo a nuestras clases*/
+.btn:hover {
+    background: rgb(161, 163, 172);
+}
+
+/*--------------------MAIN--------------------------------*/
+/* quienes somos */
+.contentSection { 
+    width: 80vw;
+    margin: 35px auto;
+    padding: 1%;
+}
+
+.title{
+    color: var(--colorPrimary);
+    /* tamaño de la letra */
+    font-size: 50px;
+    /* centrar los textos */
+     text-align: center;
+     /* magen abajo */
+     margin: bottom 40px; 
+}
+.container{
+/* hereda el ancho del papá -> section */
+    width: 100%;
+    /* caja flexible*/
+    display: flex;
+    /* centrar los elementos */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.container img{
+    width: 30%;
+    border-radius: 40px;
+}
+    /* conoce lo que hacemos */
+.container p{
+    width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--textColor);
+    font-size: 40px;
+    text-align: justify;   
+}
+
+.container iframe{ 
+    width: 50%;
+    height: 300px;
+    border-radius: 30px; 
+}
+/* Galeria de Imágenes*/
+.gallery {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    column-gap:20px; /* Espacio entre las imágenes */
+    row-gap: 20px;
+    width: 90vw; /* Ancho máximo de la cuadrícula */
+    margin: 0 auto;
+    
+}
+
+/* Estilo para las imágenes */
+.gallery img {
+    width: 100%; /* Las imágenes ocupan el 100% del ancho de la celda */
+    height: auto; /* Ajusta la altura de manera proporcional */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que siempre llene su contenedor */
+}
+
+/* FOOTER*/
+footer{
+background-color: var(--colorPrimary);
+padding:50px;
+text-align: center;
+font-size: 1em;
+margin-top: 10%;
+}
+
